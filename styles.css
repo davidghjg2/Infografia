@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #24243e;
+
+}
+
+.container {
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid #000000;
+    max-width: 550px;
+    width: 100%;
+    background-color: #f6f3f3;
+}
+
+h1 {
+    text-align: center;
+    color: #302b63;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: #302b63;
+    box-shadow: 0 0 0 3px rgba(48, 43, 99, 0.1);
+}
+
+input.valid {
+    border-color: #27ae60;
+    background-color: #f0fff4;
+}
+
+input.invalid {
+    border-color: #e74c3c;
+    background-color: #fff5f5;
+}
+
+.message {
+    font-size: 0.82em;
+    margin-top: 5px;
+    min-height: 18px;
+    font-weight: 500;
+}
+
+.message.success {
+    color: #27ae60;
+}
+
+.message.error {
+    color: #e74c3c;
+}
+
+.regex-used {
+    font-size: 0.75em;
+    color: #888;
+    background: #f4f4f4;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #24243e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #24243e;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: none;
+}
+
+.result.success {
+    background: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.result.error {
+    background: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+.info-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 12px;
+    border-left: 4px solid #302b63;
+}
+
+.info-section h3 {
+    color: #302b63;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    color: #555;
+    font-size: 0.88em;
+    line-height: 1.6;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Formularios con Expresiones Regulares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Validador Regex</h1>
+        <p class="subtitle">Validación de formularios con Expresiones Regulares en JavaScript</p>
+
+        <form id="validationForm">
+            <!-- NOMBRE -->
+            <div class="form-group">
+                <label> Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ej: Juan Pérez García">
+                <div class="message" id="nombreMsg"></div>
+                <span class="regex-used">/^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]{3,50}$/</span>
+            </div>
+
+            <!-- CORREO -->
+            <div class="form-group">
+                <label> Correo Electrónico</label>
+                <input type="text" id="correo" placeholder="Ej: usuario@dominio.com">
+                <div class="message" id="correoMsg"></div>
+                <span class="regex-used">/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/</span>
+            </div>
+
+            <!-- TELÉFONO -->
+            <div class="form-group">
+                <label> Teléfono</label>
+                <input type="text" id="telefono" placeholder="Ej: 7012-3456">
+                <div class="message" id="telefonoMsg"></div>
+                <span class="regex-used">/^[267]\d{3}-?\d{4}$/</span>
+            </div>
+
+            <!-- CONTRASEÑA -->
+            <div class="form-group">
+                <label> Contraseña</label>
+                <input type="password" id="password" placeholder="Mín. 8 chars, mayús, minús, número, especial">
+                <div class="message" id="passwordMsg"></div>
+                <span class="regex-used">/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/</span>
+            </div>
+
+            <!-- URL -->
+            <div class="form-group">
+                <label> Sitio Web (URL)</label>
+                <input type="text" id="url" placeholder="Ej: https://www.ejemplo.com">
+                <div class="message" id="urlMsg"></div>
+                <span class="regex-used">/^https?:\/\/(www\.)?[\w-]+\.[a-z]{2,}(\/\S*)?$/i</span>
+            </div>
+
+            <button type="submit"> Validar Todo</button>
+        </form>
+
+        <div class="result" id="finalResult"></div>
+
+        <div class="info-section">
+            <h3> ¿Qué son las Expresiones Regulares?</h3>
+            <p>
+                Las <strong>expresiones regulares (regex)</strong> son patrones de búsqueda que permiten
+                validar, buscar y manipular texto. En JavaScript se crean con <code>/patron/flags</code>
+                o con <code>new RegExp()</code>. Se usan métodos como <code>test()</code>,
+                <code>match()</code> y <code>replace()</code>. Esta página usa
+                <code>regex.test(valor)</code> para validar cada campo del formulario en tiempo real.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
